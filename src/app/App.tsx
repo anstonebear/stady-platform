@@ -1,15 +1,17 @@
-import React from 'react';
+import Header from '../widgets/header/header'
+import Footer from '../widgets/footer/footer'
+import Home from '../pages/Home/Home'
 
-import Header from '../widgets/header/header';
-
-import './App.css';
+import './App.css'
 
 function App() {
 	return (
 		<div className='App'>
 			<Header />
+			<Home />
+			<Footer />
 		</div>
-	);
+	)
 }
 
-export default App;
+export default App
