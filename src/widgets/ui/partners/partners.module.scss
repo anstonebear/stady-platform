@@ -1,0 +1,11 @@
+.partners {
+	&_items {
+		display: flex;
+		padding: 30px;
+		margin: 100px;
+		background-color: #fff;
+	}
+	&_item {
+		padding: 30px 40px;
+	}
+}
