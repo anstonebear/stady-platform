@@ -1,0 +1,53 @@
+.benefits {
+	&_box {
+		display: flex;
+		flex-direction: column;
+
+		padding-top: 100px;
+	}
+
+	&_title {
+		display: flex;
+
+		padding-bottom: 50px;
+		font-size: 34px;
+		font-weight: 700;
+	}
+	&_cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 10px;
+		&_card {
+			background-color: #fff;
+			padding: 10px;
+			border-radius: 10px;
+		}
+		&_number {
+			padding-right: 30px;
+			padding-top: 30px;
+
+			font-size: 50px;
+			text-align: right;
+			font-weight: 700;
+		}
+		&_text {
+			display: flex;
+
+			flex-direction: column;
+			padding: 30px;
+
+			gap: 14px;
+		}
+
+		&_name {
+			font-size: 24px;
+			text-align: left;
+			font-weight: 700;
+		}
+
+		&_descr {
+			text-align: left;
+			color: #59595a;
+		}
+	}
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import pic from '../../shared/assets/img/pic.png'
+import pic from '../../../shared/assets/img/pic.png'
 
 const Pic = () => {
 	return (
