@@ -1,48 +1,41 @@
 .testimonials {
-	&_box {
-		padding-top: 100px;
+	margin-top: 100px;
+	&_wrapper {
+		max-width: clamp(16.625rem, 0.013rem + 83.06vw, 99.688rem);
 	}
 	&_title {
-		padding-bottom: 30px;
 		font-size: 34px;
 		font-weight: 700;
 	}
 	&_info {
 		display: flex;
 		justify-content: space-between;
-		gap: 300px;
-		padding-bottom: 50px;
 	}
 	&_subtitle {
-		padding-bottom: 20px;
 		font-size: 20px;
 		color: #59595a;
 	}
 	&_viewAll {
-		&_btn {
-			display: flex;
-			background-color: #fff;
-			color: black;
-			padding: 10px;
-			border-radius: 10px;
-			font-weight: 550;
-			border: none;
-			white-space: nowrap;
-			cursor: pointer;
-		}
+		display: flex;
+		background-color: #fff;
+		color: black;
+		padding: 18px 24px;
+		border-radius: 10px;
+		font-weight: 550;
+		border: none;
+		white-space: nowrap;
+		cursor: pointer;
 	}
 	&_cards {
 		display: grid;
-		width: 1200px;
+		margin-top: 80px;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 20px;
 		&_card {
 			display: flex;
 
-			gap: 25px;
 			flex-direction: column;
 
-			padding: 40px;
 			border-radius: 10px;
 			background-color: #fff;
 			&_text {
@@ -51,7 +44,7 @@
 				font-size: 16px;
 				font-weight: 500;
 				border-bottom: 1px solid #f1f1f3;
-				padding-bottom: 40px;
+				padding: 50px;
 
 				color: #59595a;
 			}
@@ -59,10 +52,12 @@
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
-				gap: 200px;
+				gap: clamp(3.688rem, 0.05rem + 18.19vw, 21.875rem);
+				padding: 30px 50px;
 			}
 			&_user {
 				display: flex;
+
 				align-items: center;
 				justify-content: space-between;
 				gap: 10px;
@@ -74,10 +69,14 @@
 			&_btn {
 				display: flex;
 				font-weight: 600;
-				padding: 20px;
+				padding: 18px 24px;
 				border-radius: 10px;
 				background-color: #f1f1f3;
 				color: black;
+
+				border: none;
+				white-space: nowrap;
+				cursor: pointer;
 			}
 		}
 	}

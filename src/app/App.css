@@ -8,13 +8,12 @@
 a {
 	text-decoration: none;
 }
+/* max-width: clamp(16.625rem, 0.013rem + 83.06vw, 99.688rem); */
+/* padding: 18px 24px; */
 
 .container {
 	display: flex;
-	margin: auto;
-	flex-direction: column;
+	margin: 0 auto;
 	align-items: center;
 	justify-content: center;
-	gap: 5px;
-	height: 100dvh;
 }

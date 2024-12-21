@@ -1,12 +1,14 @@
 .header {
-	&_box {
+	border-bottom: 1px solid #f1f1f3;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color: #fff;
+	&_wrapper {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 24px 132px;
-		border-bottom: 1px solid #f1f1f3;
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-		background-color: #fff;
+		gap: clamp(7.813rem, -0.125rem + 39.69vw, 47.5rem);
+
+		padding: 24px 0;
 	}
 
 	&_left {
@@ -24,7 +26,7 @@
 		&_signup {
 			display: flex;
 			text-decoration: none;
-			padding: 14px;
+			padding: 18px 24px;
 			color: #000;
 			border-radius: 10px;
 		}
@@ -38,15 +40,14 @@
 			background-color: #ff9500;
 
 			border-radius: 10px;
-			width: 100px;
-			height: 45px;
+			padding: 18px 24px;
 			align-items: center;
 			justify-content: center;
 		}
 	}
 	&_logo {
-		width: 50px;
-		height: 50px;
+		min-width: 50px;
+		min-height: 50px;
 	}
 	&_menu {
 		display: flex;
@@ -59,17 +60,7 @@
 			align-items: center;
 			justify-content: center;
 			color: #000;
-			width: 100px;
-			height: 45px;
-		}
-		&_link {
-			display: flex;
-			text-decoration: none;
-			align-items: center;
-			justify-content: center;
-			color: #000;
-			width: 100px;
-			height: 45px;
+			padding: 18px 24px;
 			border-radius: 10px;
 		}
 		&_link:hover {

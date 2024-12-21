@@ -1,9 +1,9 @@
 .ourCurses {
-	&_box {
-		padding-top: 100px;
+	margin-top: 100px;
+	&_wrapper {
+		max-width: clamp(16.625rem, 0.013rem + 83.06vw, 99.688rem);
 	}
 	&_title {
-		padding-bottom: 30px;
 		font-size: 34px;
 		font-weight: 700;
 	}
@@ -11,9 +11,8 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 300px;
-		padding-bottom: 50px;
+
 		&_txt {
-			padding-bottom: 20px;
 			font-size: 20px;
 			color: #59595a;
 		}
@@ -21,7 +20,7 @@
 			display: flex;
 			background-color: #fff;
 			color: black;
-			padding: 10px;
+			padding: 18px 24px;
 			border-radius: 10px;
 			font-weight: 550;
 			border: none;
@@ -30,29 +29,31 @@
 		}
 	}
 	&_items {
+		margin-top: 80px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 20px;
+		grid-gap: 30px;
 		&_card {
 			display: flex;
 			gap: 25px;
 			flex-direction: column;
 			align-items: center;
-			padding: 20px;
+			padding: 50px;
 			border-radius: 10px;
 			background-color: #fff;
 		}
 		&_img {
-			width: 500px;
-			padding-top: 20px;
-			object-fit: cover;
+			width: clamp(7.125rem, 0.05rem + 35.38vw, 42.5rem);
+			height: clamp(3.938rem, -0.025rem + 19.81vw, 23.75rem);
+
 			border-radius: 10px;
 		}
 		&_beginning {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			width: 500px;
+			width: clamp(7.125rem, 0.05rem + 35.38vw, 42.5rem);
+			// gap: clamp(3.375rem, 0.05rem + 16.63vw, 20rem);
 		}
 		&_experience {
 			display: flex;
@@ -92,13 +93,14 @@
 			display: flex;
 			background-color: #f1f1f3;
 			color: black;
-			padding: 25px;
+			padding: 18px 24px;
 			border-radius: 10px;
 			font-weight: 550;
+			border: none;
 
 			justify-content: center;
-
-			width: 480px;
+			cursor: pointer;
+			width: clamp(7.125rem, 0.05rem + 35.38vw, 42.5rem);
 		}
 	}
 }

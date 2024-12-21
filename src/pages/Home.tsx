@@ -7,7 +7,7 @@ import Benefits from '~/widgets/benefits/benefits'
 import OurCurses from '~/widgets/ourCurses/ourCurses'
 import Testimonials from '~/widgets/testimonials/testimonials'
 
-import style from './Home.module.scss'
+import style from '../shared/style/main.module.scss'
 
 const Home = () => {
 	return (

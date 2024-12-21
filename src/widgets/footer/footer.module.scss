@@ -1,19 +1,21 @@
 .footer {
-	// max-height: 472px;
+	margin-top: 150px;
 	background-color: #fff;
 
-	&_box {
+	border-top: 1px solid #f1f1f3;
+
+	&_wrapper {
 		display: flex;
 		flex-direction: column;
-		// justify-content: space-between;
+		justify-content: space-between;
+		//width: clamp(16.625rem, 0.013rem + 83.06vw, 99.688rem);
 		//align-items: center;
-		padding: 90px 132px 30px;
-		border-top: 1px solid #f1f1f3;
 	}
 	&_top {
 		display: flex;
 		justify-content: space-between;
-		padding-bottom: 50px;
+		gap: clamp(5.688rem, 28.44vw, 34.125rem);
+		padding: 100px 0 50px 0;
 		border-bottom: 1px solid #f1f1f3;
 	}
 
@@ -30,13 +32,9 @@
 		padding-bottom: 20px;
 	}
 	&_contacts {
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
-
 		&_menu {
 			display: flex;
-
+			gap: 20px;
 			flex-direction: column;
 		}
 		&_item {
@@ -47,12 +45,11 @@
 	}
 	&_info {
 		display: flex;
-		gap: 100px;
+		gap: clamp(1.563rem, 7.81vw, 9.375rem);
 
 		&_title {
 			font-size: 24px;
 			font-weight: 700;
-			padding-bottom: 20px;
 		}
 		&_item {
 			color: #9c9c9c;

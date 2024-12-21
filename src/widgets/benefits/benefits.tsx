@@ -1,24 +1,31 @@
 import React from 'react'
 
+import { Container } from '~/shared/ui/container'
 import BenefitsCard from './benefitsCard'
 
 import style from './benefits.module.scss'
 
-const Benefits = () => {
+const Benefits: React.FC = () => {
 	return (
 		<div className={style.benefits}>
-			<div className={style.benefits_box}>
-				<span className={style.benefits_title}>Преимущества</span>
+			<Container>
+				<div className={style.benefits_wrapper}>
+					<h1 className={style.benefits_title}>Преимущества</h1>
 
-				<div className={style.benefits_cards}>
-					<BenefitsCard />
-					<BenefitsCard />
-					<BenefitsCard />
-					<BenefitsCard />
-					<BenefitsCard />
-					<BenefitsCard />
+					<div className={style.benefits_cards}>
+						{Array(6)
+							.fill(null)
+							.map((_, index) => (
+								<BenefitsCard
+									key={index}
+									number={`0${index + 1}`}
+									name={`Гибкий график обучения`}
+									description={`Составте свою курсовую работу с учетом ваших текущих обязательств`}
+								/>
+							))}
+					</div>
 				</div>
-			</div>
+			</Container>
 		</div>
 	)
 }
