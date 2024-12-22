@@ -1,21 +1,19 @@
 .aboutCourses {
-	&_box {
+	margin-top: 100px;
+	border-bottom: 1px solid #e3e3e7;
+	&_wrapper {
 		display: flex;
 		justify-content: space-between;
-		gap: 100px;
+		gap: clamp(1.063rem, -0.824rem + 9.43vw, 6.25rem);
 		padding-bottom: 50px;
-		border-bottom: 1px solid #e3e3e7;
 	}
 	&_title {
-		display: flex;
-		max-width: 800px;
 		font-size: 34px;
 		font-weight: 700;
 	}
 	&_text {
-		display: flex;
-		max-width: 600px;
-		padding-bottom: 20px;
+		max-width: 750px;
+
 		font-size: 20px;
 		color: #59595a;
 	}

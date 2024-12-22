@@ -5,6 +5,11 @@
 	font-family: 'Roboto', sans-serif;
 }
 
+:root {
+	--color: #f1f1f3;
+	--padding: 18px 24px;
+}
+
 a {
 	text-decoration: none;
 }

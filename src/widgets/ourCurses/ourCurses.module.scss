@@ -20,7 +20,7 @@
 			display: flex;
 			background-color: #fff;
 			color: black;
-			padding: 18px 24px;
+			padding: var(--color);
 			border-radius: 10px;
 			font-weight: 550;
 			border: none;
@@ -65,7 +65,7 @@
 		&_level {
 			padding: 10px;
 			border-radius: 10px;
-			background-color: #f1f1f3;
+			background-color: var(--color);
 			color: #59595a;
 		}
 		&_teacher {
@@ -91,9 +91,9 @@
 		}
 		&_btn {
 			display: flex;
-			background-color: #f1f1f3;
+			background-color: var(--color);
 			color: black;
-			padding: 18px 24px;
+			padding: var(--padding);
 			border-radius: 10px;
 			font-weight: 550;
 			border: none;

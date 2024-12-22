@@ -28,9 +28,9 @@ const OurCurses = () => {
 					<div className={style.ourCurses_items}>
 						{Array(6)
 							.fill(null)
-							.map((_, index) => (
+							.map((_, id) => (
 								<OurCursesCard
-									key={index}
+									key={id}
 									img={img}
 									title={`Фундаментальный веб-дизаин`}
 									descr={`Изучите основы веб-дизайна, включая HTML, CSS и принципы адаптивного

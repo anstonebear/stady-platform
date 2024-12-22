@@ -26,12 +26,12 @@
 		&_signup {
 			display: flex;
 			text-decoration: none;
-			padding: 18px 24px;
+			padding: var(--padding);
 			color: #000;
 			border-radius: 10px;
 		}
 		&_signup:hover {
-			background-color: #f1f1f3;
+			background-color: var(--color);
 		}
 		&_signin {
 			display: flex;
@@ -40,7 +40,7 @@
 			background-color: #ff9500;
 
 			border-radius: 10px;
-			padding: 18px 24px;
+			padding: var(--padding);
 			align-items: center;
 			justify-content: center;
 		}
@@ -60,14 +60,14 @@
 			align-items: center;
 			justify-content: center;
 			color: #000;
-			padding: 18px 24px;
+			padding: var(--padding);
 			border-radius: 10px;
 		}
 		&_link:hover {
-			background-color: #f7f7f8;
+			background-color: var(--color);
 		}
-		&_link:active {
-			background-color: #f1f1f3;
-		}
+		// &_link:active {
+		// 	background-color: #f1f1f3;
+		// }
 	}
 }

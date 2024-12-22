@@ -1,0 +1,118 @@
+.coursesCards {
+	margin-top: 100px;
+
+	&_wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		max-width: 1560px;
+	}
+}
+
+.coursesCard {
+	background-color: #fff;
+
+	border-radius: 10px;
+
+	&_wrapper {
+		display: flex;
+		flex-direction: column;
+		padding: 50px;
+		gap: 30px;
+	}
+	&_info {
+		display: flex;
+		justify-content: space-between;
+
+		&_desc {
+			max-width: 1200px;
+			&_title {
+				font-size: 34px;
+				font-weight: 700;
+			}
+			&_text {
+				font-size: 20px;
+				color: #59595a;
+			}
+		}
+		&_view {
+			background-color: var(--color);
+			color: black;
+			padding: var(--padding);
+			border-radius: 10px;
+			font-weight: 550;
+			border: none;
+			white-space: nowrap;
+			cursor: pointer;
+		}
+	}
+	&_image {
+		display: flex;
+		justify-content: space-between;
+		gap: 30px;
+
+		&_img {
+			border-radius: 10px;
+			max-width: 470px;
+			max-height: 470px;
+		}
+	}
+	&_beginning {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&_experience {
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+		align-items: center;
+	}
+	&_level {
+		padding: 10px;
+		border-radius: 10px;
+		background-color: #fff;
+
+		border: 0.5px solid;
+		border-color: var(--color);
+	}
+	&_teacher {
+		font-weight: 550;
+	}
+
+	&_curriculum {
+		border: 0.5px solid;
+		border-color: var(--color);
+		border-radius: 10px;
+
+		&_title {
+			padding: 0 0 24px 30px;
+			border-bottom: 0.5px solid;
+			border-color: var(--color);
+			font-size: 24px;
+			font-weight: 700;
+		}
+		&_list {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+
+			&_column {
+				display: flex;
+				flex-direction: column;
+				border-right: 0.5px solid;
+				border-color: var(--color);
+				gap: 20px;
+				padding: 0 50px 50px 50px;
+				max-width: 300px;
+			}
+
+			&_num {
+				font-size: 34px;
+			}
+			&_lesson {
+				font-weight: 500;
+				font-size: 24px;
+			}
+		}
+	}
+}
