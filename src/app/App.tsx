@@ -1,7 +1,8 @@
 import Header from '../widgets/header/header'
 import Footer from '../widgets/footer/footer'
 //import Home from '../pages/Home'
-import Courses from '../pages/Courses'
+// import Courses from '../pages/Courses'
+import Course from '~/pages/Course'
 
 import './App.css'
 
@@ -10,7 +11,8 @@ function App() {
 		<div className='App'>
 			<Header />
 			{/* <Home /> */}
-			<Courses />
+			{/* <Courses /> */}
+			<Course />
 			<Footer />
 		</div>
 	)

@@ -1,0 +1,86 @@
+.curriculum {
+	margin-top: 100px;
+	&_wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 20px;
+	}
+}
+
+.curriculumCard {
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 40px;
+	&_wrapper {
+	}
+	&_number {
+		text-align: right;
+		margin: 0 auto;
+		font-size: 40px;
+		font-weight: 700;
+	}
+	&_title {
+		margin: 40px 40px 40px 0px;
+		font-size: 24px;
+		font-weight: 500;
+	}
+	&_lessons {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+}
+
+.curriculumLesson {
+	border: 0.5px solid;
+	border-radius: 10px;
+	border-color: var(--color);
+	cursor: pointer;
+
+	&_wrapper {
+		display: flex;
+		padding: 20px;
+		justify-content: space-between;
+		gap: 30px;
+	}
+	&_info {
+		display: flex;
+		flex-direction: column;
+		max-width: 380px;
+		gap: 5px;
+
+		&_title {
+		}
+		&_lessonNum {
+			color: #59595a;
+		}
+	}
+
+	&_duration {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		color: #59595a;
+		background-color: var(--color);
+		border-radius: 10px;
+		padding: 10px;
+
+		&_clock {
+		}
+		&_time {
+		}
+	}
+}
+
+.curriculumLesson {
+	&:hover {
+		border-color: #ffd499;
+		box-shadow: 0 0 20px 10px #fff4e5;
+		.curriculumLesson_duration {
+			background-color: #ffd499;
+		}
+	}
+	&:not(:hover) .curriculumLesson_duration {
+		background-color: inherit;
+	}
+}

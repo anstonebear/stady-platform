@@ -15,6 +15,8 @@ import logoNetflix from './logoNetflix.svg'
 import logoNotion from './logoNotion.svg'
 import logoSpotify from './logoSpotify.svg'
 
+import clock from './clock.svg'
+
 export {
 	point,
 	mail,
@@ -30,5 +32,6 @@ export {
 	logoSpotify,
 	logoNetflix,
 	logoZapier,
-	logoZoom
+	logoZoom,
+	clock
 }

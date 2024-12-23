@@ -14,7 +14,7 @@ import {
 	logoZoom
 } from '~/shared/assets/img'
 
-const Partners = () => {
+const Partners: React.FC = () => {
 	return (
 		<div className={style.partners}>
 			<Container>

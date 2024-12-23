@@ -1,4 +1,4 @@
-.aboutCourses {
+.aboutBlock {
 	margin-top: 100px;
 	border-bottom: 1px solid #e3e3e7;
 	&_wrapper {
@@ -8,6 +8,9 @@
 		padding-bottom: 50px;
 	}
 	&_title {
+		display: flex;
+
+		align-items: center;
 		font-size: 34px;
 		font-weight: 700;
 	}

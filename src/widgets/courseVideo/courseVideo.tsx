@@ -2,14 +2,16 @@ import React from 'react'
 
 import { Container } from '~/shared/ui/container'
 
-import pic from '../../../shared/public/pic.png'
+interface ICourseVideoProps {
+	image: string
+}
 
-const Pic: React.FC = () => {
+const CourseVideo: React.FC<ICourseVideoProps> = ({ image }) => {
 	return (
 		<div style={{ marginTop: 100 }}>
 			<Container>
 				<img
-					src={pic}
+					src={image}
 					alt=''
 					style={{
 						maxWidth: 'clamp(16.625rem, 0.013rem + 83.06vw, 99.688rem)',
@@ -22,4 +24,4 @@ const Pic: React.FC = () => {
 	)
 }
 
-export default Pic
+export default CourseVideo
