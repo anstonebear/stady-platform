@@ -1,0 +1,97 @@
+.plans {
+	margin-top: 100px;
+
+	&_wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 30px;
+		background-color: #fff;
+		border-radius: 10px;
+		max-width: 1560px;
+		padding: 80px;
+		border: 1px solid var(--color);
+	}
+}
+
+.plan {
+	&_wrapper {
+		background-color: #fcfcfd;
+		border-radius: 10px;
+		border: 1px solid var(--color);
+		padding: 30px;
+	}
+	&_title {
+		background-color: #fff9f0;
+		border-radius: 10px;
+		border: 1px solid #ffeacc;
+		&_text {
+			display: flex;
+			font-weight: 600;
+			padding: 10px;
+			justify-content: center;
+		}
+	}
+	&_price {
+		display: flex;
+		margin-top: 50px;
+
+		justify-content: center;
+		&_coin {
+			font-weight: 600;
+			font-size: 58px;
+		}
+		&_month {
+			font-weight: 600;
+			margin-top: auto;
+			color: #59595a;
+		}
+	}
+	&_available {
+		margin-top: 50px;
+		background-color: #fff;
+		border-radius: 10px 10px 0 0;
+		padding: 40px;
+		border: 1px solid var(--color);
+		&_title {
+			display: flex;
+			font-weight: 600;
+			justify-content: center;
+		}
+		&_list {
+			display: flex;
+			flex-direction: column;
+			margin-top: 30px;
+			gap: 20px;
+		}
+		&_btn {
+			display: flex;
+
+			justify-content: center;
+			font-weight: 600;
+			padding: 20px;
+			width: 100%;
+			border-radius: 0 0 10px 10px;
+			border: none;
+			color: white;
+			background-color: #ff9500;
+		}
+	}
+}
+
+.availableItem {
+	display: flex;
+	align-items: center;
+	border: 1px solid var(--color);
+	border-radius: 10px;
+	padding: 15px;
+	gap: 20px;
+	&_img {
+		padding: 15px;
+		background-color: #fff9f0;
+		border-radius: 10px;
+	}
+	&_text {
+		color: #59595a;
+	}
+}

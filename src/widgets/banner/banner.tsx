@@ -3,7 +3,7 @@ import React from 'react'
 import { Container } from '~/shared/ui/container'
 import Button from '~/shared/ui/button'
 
-import { lightning } from '~/shared/assets/img/index'
+import { lightning } from '~/shared/assets/index'
 
 import style from './banner.module.scss'
 

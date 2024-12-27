@@ -10,7 +10,7 @@ import {
 	facebook,
 	twit,
 	Logo
-} from '../../shared/assets/img/index'
+} from '../../shared/assets/index'
 
 import style from './footer.module.scss'
 

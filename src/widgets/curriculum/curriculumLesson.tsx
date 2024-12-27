@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { clock } from '~/shared/assets/img'
+import { clock } from '~/shared/assets'
 
 import style from './curriculum.module.scss'
 

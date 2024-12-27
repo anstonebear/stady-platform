@@ -12,7 +12,7 @@ import {
 	logoSpotify,
 	logoZapier,
 	logoZoom
-} from '~/shared/assets/img'
+} from '~/shared/assets'
 
 const Partners: React.FC = () => {
 	return (

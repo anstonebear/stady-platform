@@ -3,14 +3,14 @@
 	&_wrapper {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 20px;
+		grid-gap: 30px;
 	}
 }
 
 .curriculumCard {
 	background-color: #fff;
 	border-radius: 10px;
-	padding: 40px;
+	padding: 50px;
 	&_wrapper {
 	}
 	&_number {

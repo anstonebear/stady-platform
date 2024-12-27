@@ -26,9 +26,9 @@ const Testimonials = () => {
 					<div className={style.testimonials_cards}>
 						{Array(4)
 							.fill(null)
-							.map((_, index) => (
+							.map((_, id) => (
 								<TestimonialsCard
-									key={index}
+									key={id}
 									text={`Курс веб-дизайна дал мне прочную основу. Преподаватели были знающими и
  				поддерживающими, а интерактивная среда обучения была увлекательной. Я
  				настоятельно рекомендую его!`}
