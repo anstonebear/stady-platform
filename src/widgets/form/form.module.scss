@@ -1,0 +1,105 @@
+.form {
+	margin-top: 100px;
+	&_wrapper {
+		padding: 10px 50px 50px 50px;
+		background-color: #fff;
+		border-radius: 10px;
+	}
+	&_title {
+		display: flex;
+		justify-content: center;
+	}
+	&_descr {
+		display: flex;
+		justify-content: center;
+		color: #4c4c4d;
+	}
+	&_inputs {
+		display: flex;
+		margin-top: 50px;
+		gap: 25px;
+		flex-direction: column;
+		&_input {
+			width: 443px;
+			background-color: var(--color);
+			border-radius: 10px;
+			border: none;
+			padding: 24px;
+		}
+		&_error {
+		}
+	}
+	&_agree {
+		display: flex;
+		margin-top: 25px;
+		gap: 10px;
+		align-items: center;
+		color: #4c4c4d;
+		font-size: 24px;
+		&_checkbox {
+			width: 24px;
+			height: 24px;
+			border-radius: 10px;
+			background-color: var(--color);
+			border: none;
+			accent-color: #4c4c4d;
+			cursor: pointer;
+		}
+	}
+	&_button {
+		margin-top: 25px;
+		&_btn {
+			width: 100%;
+			background-color: #ff9500;
+			border: none;
+			border-radius: 10px;
+			padding: 24px;
+			color: #fff;
+			font-weight: 500;
+			font-size: 25px;
+			cursor: pointer;
+		}
+
+		&_btnGoogle {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			width: 100%;
+			background-color: var(--color);
+			border: none;
+			border-radius: 10px;
+			padding: 24px;
+
+			font-weight: 500;
+			font-size: 25px;
+			cursor: pointer;
+
+			&_img {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+
+	&_borderline {
+		margin-top: 25px;
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		justify-content: center;
+		color: #4c4c4d;
+		font-size: 24px;
+	}
+}
+
+.inputBlock {
+	display: flex;
+	flex-direction: column;
+
+	gap: 15px;
+
+	&_title {
+		font-weight: 700;
+	}
+}
