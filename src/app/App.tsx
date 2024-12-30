@@ -1,3 +1,5 @@
+import { Routes, Route } from 'react-router'
+
 import Header from '../widgets/header/header'
 import Footer from '../widgets/footer/footer'
 import Home from '../pages/Home'
@@ -15,14 +17,18 @@ function App() {
 	return (
 		<div className='App'>
 			<Header />
-			<Home />
-			<Courses />
-			<Course />
-			<AboutUs />
-			<Pricing />
-			<Contacts />
-			<SignUp />
-			<Login />
+
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='/courses' element={<Courses />} />
+				<Route path='/course' element={<Course />} />
+				<Route path='/aboutus' element={<AboutUs />} />
+				<Route path='/pricing' element={<Pricing />} />
+				<Route path='/contacts' element={<Contacts />} />
+				<Route path='/signup' element={<SignUp />} />
+				<Route path='/login' element={<Login />} />
+			</Routes>
+
 			<Footer />
 		</div>
 	)

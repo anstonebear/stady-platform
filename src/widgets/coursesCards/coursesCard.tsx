@@ -44,7 +44,7 @@ const CoursesCard: React.FC<CoursesCardProps> = ({
 						<span className={style.coursesCard_info_desc_text}>{descr}</span>
 					</div>
 					<div>
-						<Button to='' className={style.coursesCard_info_view}>
+						<Button to='/course' className={style.coursesCard_info_view}>
 							Подробнее
 						</Button>
 					</div>

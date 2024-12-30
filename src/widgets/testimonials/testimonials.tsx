@@ -20,7 +20,9 @@ const Testimonials = () => {
 							делятся своим опытом и достижениями.
 						</span>
 
-						<Button className={style.testimonials_viewAll}>Показать все</Button>
+						<Button to='/' className={style.testimonials_viewAll}>
+							Показать все
+						</Button>
 					</div>
 
 					<div className={style.testimonials_cards}>

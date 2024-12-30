@@ -45,48 +45,48 @@ const Footer: FC = () => {
 						<nav className={style.footer_info}>
 							<div className={style.footer_info_menu}>
 								<h1 className={style.footer_info_title}>Главная</h1>
-								<a href='' className={style.footer_info_item}>
+								<Link to='/courses' className={style.footer_info_item}>
 									Курсы
-								</a>
-								<a href='' className={style.footer_info_item}>
+								</Link>
+								<Link to='/' className={style.footer_info_item}>
 									Отзывы
-								</a>
-								<a href='' className={style.footer_info_item}>
+								</Link>
+								<Link to='/' className={style.footer_info_item}>
 									FAQ
-								</a>
+								</Link>
 							</div>
 							<div className={style.footer_info_menu}>
 								<h1 className={style.footer_info_title}>О нас</h1>
-								<a href='' className={style.footer_info_item}>
+								<Link to='/aboutus' className={style.footer_info_item}>
 									Компания
-								</a>
-								<a href='' className={style.footer_info_item}>
+								</Link>
+								<Link to='/aboutus' className={style.footer_info_item}>
 									Достижения
-								</a>
-								<a href='' className={style.footer_info_item}>
+								</Link>
+								<Link to='/aboutus' className={style.footer_info_item}>
 									Цели
-								</a>
+								</Link>
 							</div>
 							<div className={style.footer_info_menu}>
 								<h1 className={style.footer_info_title}>Социальные сети</h1>
 								<div className={style.footer_info_social}>
-									<a href='' className={style.icon}>
+									<Link to='/' className={style.icon}>
 										<img
 											src={facebook}
 											alt='facebook'
 											className={style.icon_img}
 										/>
-									</a>
-									<a href='' className={style.icon}>
+									</Link>
+									<Link to='/' className={style.icon}>
 										<img src={twit} alt='twitter' className={style.icon_img} />
-									</a>
-									<a href='' className={style.icon}>
+									</Link>
+									<Link to='/' className={style.icon}>
 										<img
 											src={linked}
 											alt='linkedin'
 											className={style.icon_img}
 										/>
-									</a>
+									</Link>
 								</div>
 							</div>
 						</nav>

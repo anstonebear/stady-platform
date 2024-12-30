@@ -36,7 +36,9 @@ const Plan: React.FC<IPlanProps> = ({ title, price }) => {
 							))}
 					</div>
 				</div>
-				<Button className={style.plan_available_btn}>Начать обучение</Button>
+				<Button to='/courses' className={style.plan_available_btn}>
+					Начать обучение
+				</Button>
 			</div>
 		</div>
 	)

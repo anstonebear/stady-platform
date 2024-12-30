@@ -21,7 +21,7 @@ const TestimonialsCard: React.FC<TestimonialsCardProps> = ({
 			<div className={style.testimonials_cards_card_text}>{text}</div>
 			<div className={style.testimonials_cards_card_info}>
 				<User name={name} avatar={avatar} />
-				<Button to='' className={style.testimonials_cards_card_btn}>
+				<Button to='/' className={style.testimonials_cards_card_btn}>
 					Читать всю историю
 				</Button>
 			</div>

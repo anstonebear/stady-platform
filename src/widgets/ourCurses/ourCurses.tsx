@@ -21,7 +21,7 @@ const OurCurses = () => {
 							преподающие в доступной форме.
 						</span>
 
-						<Button to='' className={style.ourCurses_info_btn}>
+						<Button to='/courses' className={style.ourCurses_info_btn}>
 							Показать все
 						</Button>
 					</div>

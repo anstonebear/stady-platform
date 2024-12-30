@@ -35,7 +35,7 @@ const OurCursesCard: React.FC<OurCursesCardProps> = ({
 				<h2 className={style.ourCurses_items_title}>{title}</h2>
 				<span className={style.ourCurses_items_descr}>{descr}</span>
 			</div>
-			<Button to='' className={style.ourCurses_items_btn}>
+			<Button to='/course' className={style.ourCurses_items_btn}>
 				Начать обучение
 			</Button>
 		</div>

@@ -32,7 +32,7 @@ const Banner = () => {
 						<Button className={style.buttons_course} to='/courses'>
 							Записаться на курс
 						</Button>
-						<Button className={style.buttons_price} to='/courses'>
+						<Button className={style.buttons_price} to='/pricing'>
 							Узнать цены
 						</Button>
 					</div>
