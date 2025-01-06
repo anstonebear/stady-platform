@@ -5,8 +5,8 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	defaultValue?: string
 }
 
-const Input: React.FC<InputProps> = ({ className, ...props }) => {
-	return <input className={className} {...props} />
+const Input: React.FC<InputProps> = ({ className, defaultValue, ...props }) => {
+	return <input value={defaultValue} className={className} {...props} />
 }
 
 export default Input

@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 
 import { Container } from '~/shared/ui/container'
 import InputBlock from './inputBlock'
@@ -38,9 +38,21 @@ const InputData: {
 interface IFormProps {
 	title: string
 	descr: string
+	name: boolean
+	handleClick: (email: string, pass: string) => void
 }
 
-const Form: React.FC<IFormProps> = ({ title, descr }) => {
+const Form: React.FC<IFormProps> = ({
+	title,
+	descr,
+	name = false,
+	handleClick
+}) => {
+	const [email, setEmail] = useState('')
+	const [pass, setPass] = useState('')
+	//const [name, setName] = useState('')
+	//const [error, setError] = useState(false)
+
 	return (
 		<form className={style.form}>
 			<Container>
@@ -48,15 +60,25 @@ const Form: React.FC<IFormProps> = ({ title, descr }) => {
 					<h1 className={style.form_title}>{title}</h1>
 					<span className={style.form_descr}>{descr}</span>
 					<div className={style.form_inputs}>
-						{Object.keys(InputData).map((id: string) => (
-							<InputBlock
-								key={id}
-								className={style.form_inputs_input}
-								title={InputData[+id].title}
-								type={InputData[+id].type}
-								placeholderText={InputData[+id].placeholderText}
-							/>
-						))}
+						{Object.keys(InputData).map((id: string) =>
+							+id === 1 && !name ? null : (
+								<InputBlock
+									key={id}
+									className={style.form_inputs_input}
+									title={InputData[+id].title}
+									type={InputData[+id].type}
+									placeholderText={InputData[+id].placeholderText}
+									value={+id === 2 ? email : +id === 3 ? pass : ''}
+									onChange={e =>
+										+id === 2
+											? setEmail(e.target.value)
+											: +id === 3
+												? setPass(e.target.value)
+												: null
+									}
+								/>
+							)
+						)}
 					</div>
 					<div className={style.form_agree}>
 						<input
@@ -67,7 +89,12 @@ const Form: React.FC<IFormProps> = ({ title, descr }) => {
 						<label htmlFor='agree'>запомнить меня</label>
 					</div>
 					<div className={style.form_button}>
-						<Button className={style.form_button_btn}>Отправить</Button>
+						<Button
+							className={style.form_button_btn}
+							onClick={() => handleClick(email, pass)}
+						>
+							Отправить
+						</Button>
 					</div>
 					<div className={style.form_borderline}>или</div>
 					<div className={style.form_button}>

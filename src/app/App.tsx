@@ -8,8 +8,8 @@ import Course from '~/pages/Course'
 import AboutUs from '../pages/AboutUs'
 import Pricing from '../pages/Pricing'
 import Contacts from '~/pages/Contacts'
-import SignUp from '~/pages/SignUp'
-import Login from '~/pages/Login'
+import Signin from '~/pages/Signin'
+import Registr from '~/pages/Registr'
 
 import './App.css'
 
@@ -25,8 +25,8 @@ function App() {
 				<Route path='/aboutus' element={<AboutUs />} />
 				<Route path='/pricing' element={<Pricing />} />
 				<Route path='/contacts' element={<Contacts />} />
-				<Route path='/signup' element={<SignUp />} />
-				<Route path='/login' element={<Login />} />
+				<Route path='/signin' element={<Signin />} />
+				<Route path='/registr' element={<Registr />} />
 			</Routes>
 
 			<Footer />

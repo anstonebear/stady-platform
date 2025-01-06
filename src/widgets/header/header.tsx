@@ -36,10 +36,10 @@ const Header: FC = () => {
 						</nav>
 					</div>
 					<div className={style.header_right}>
-						<Button to='/login' className={style.header_right_signup}>
+						<Button to='/registr' className={style.header_right_registr}>
 							Регистрация
 						</Button>
-						<Button to='/signup' className={style.header_right_signin}>
+						<Button to='/signin' className={style.header_right_signin}>
 							Войти
 						</Button>
 					</div>

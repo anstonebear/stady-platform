@@ -19,7 +19,8 @@ const Button: React.FC<ButtonProps> = ({
 				{children}
 			</Link>
 		)
-	} else {
+	}
+	{
 		return (
 			<button className={className} {...props}>
 				{children}
