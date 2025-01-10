@@ -11,27 +11,51 @@ const Registr: React.FC = () => {
 	const dispatch = useDispatch()
 	const navigate = useNavigate()
 
-	const handleRegister = (
+	const handleRegister = async (
 		event: React.FormEvent<HTMLFormElement>,
 		email: string,
 		password: string
 	) => {
 		event.preventDefault()
 		const auth = getAuth()
-		console.log(auth)
+		console.log(auth, 'auth')
+		console.log(email, password, 'email pass')
+
 		createUserWithEmailAndPassword(auth, email, password)
-			.then(({ user }) => {
-				console.log(user)
-				dispatch(
-					setUser({
-						email: user.email,
-						id: user.uid,
-						token: user.refreshToken
-					})
-				)
-				navigate('/')
+			.then(userCredential => {
+				// Signed up
+				const user = userCredential.user
+				console.log(user, 'RI_user')
+				// ...
 			})
-			.catch(console.error)
+			.catch(error => {
+				const errorCode = error.code
+				console.log(errorCode, 'RI_errorCode')
+				const errorMessage = error.message
+				console.error(errorMessage, 'RI_errormessage')
+				// ..
+			})
+
+		try {
+			const { user } = await createUserWithEmailAndPassword(
+				auth,
+				email,
+				password
+			)
+			console.log(user, 'user')
+
+			dispatch(
+				setUser({
+					email: user.email,
+					id: user.uid,
+					token: user.refreshToken
+				})
+			)
+
+			navigate('/')
+		} catch (error) {
+			console.error(error)
+		}
 	}
 
 	return (
@@ -41,7 +65,7 @@ const Registr: React.FC = () => {
 					title='Регистрация'
 					descr='Зарегистрируйтесь на SkillBridge!'
 					name={false}
-					handleClick={() => handleRegister}
+					handleClick={(e, email, pass) => handleRegister(e, email, pass)}
 				/>
 			</main>
 		</div>

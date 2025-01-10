@@ -3,9 +3,12 @@ import React from 'react'
 import { Container } from '~/shared/ui/container'
 import CoursesCard from './coursesCard'
 import { image1, image2, image3 } from '~/shared/public/index'
+import { dataCourses } from '~/api/request'
+
 import style from './coursesCards.module.scss'
 
 const CoursesCards = () => {
+	console.log(dataCourses, 'dataCourses')
 	return (
 		<div className={style.coursesCards}>
 			<Container>

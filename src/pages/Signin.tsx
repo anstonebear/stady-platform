@@ -18,10 +18,10 @@ const Signin: React.FC = () => {
 	) => {
 		event.preventDefault()
 		const auth = getAuth()
-		console.log(auth)
+		console.log(auth, 'auth')
 		signInWithEmailAndPassword(auth, email, password)
 			.then(({ user }) => {
-				console.log(user)
+				console.log(user, 'user')
 				dispatch(
 					setUser({
 						email: user.email,
@@ -41,7 +41,7 @@ const Signin: React.FC = () => {
 					title='Вход'
 					descr='Добро пожаловать на SkillBridge!'
 					name={true}
-					handleClick={() => handelSignIn}
+					handleClick={(e, email, pass) => handelSignIn(e, email, pass)}
 				/>
 			</main>
 		</div>
