@@ -1,5 +1,5 @@
 import { useState } from 'react'
-//import { SubmitHandler, useForm } from 'react-hook-form'
+import { SubmitHandler, useForm } from 'react-hook-form'
 import { Container } from '~/shared/ui/container'
 import InputBlock from './inputBlock'
 import Button from '~/shared/ui/button'
@@ -46,12 +46,12 @@ interface IFormProps {
 	) => void
 }
 
-// interface ISubmitForm {
-// 	email: string
-// 	pass: string
-// 	name?: string
-// 	message?: string
-// }
+interface ISubmitForm {
+	email: string
+	pass: string
+	name?: string
+	message?: string
+}
 
 const Form: React.FC<IFormProps> = ({
 	title,
@@ -61,24 +61,54 @@ const Form: React.FC<IFormProps> = ({
 }) => {
 	const [email, setEmail] = useState('')
 	const [pass, setPass] = useState('')
-	//const [name, setName] = useState('')
 
-	// const { register, handleSubmit, formState } = useForm<ISubmitForm>({
-	// 	mode: 'onChange'
-	// })
+	const { register, handleSubmit, formState } = useForm<ISubmitForm>({
+		mode: 'onBlur'
+	})
 
-	// const emailError = formState.errors?.message
-	// const passError = formState.errors?.message
 	//const nameError =formState.errors?.name && setName('')
 
-	// const onSubmit: SubmitHandler<ISubmitForm> = data => {
-	// 	console.log(data, 'данные формы')
-	// }
+	const submit: SubmitHandler<ISubmitForm> = (data: ISubmitForm) => {
+		console.log(data, 'данные формы')
+	}
 
-	//onSubmit={handleSubmit(onSubmit)}
+	const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+		console.log('onSubmit вызван')
+		e.preventDefault()
+		handleSubmit(submit)(e)
+		console.log(handleSubmit(submit), 'handleSubmit вызван')
+		handleClick(e, email, pass)
+		console.log(handleClick, 'handleClick вызван')
+	}
+	//onSubmit={handleSubmit(submit)}
+	// const handleSubmit = (submit: SubmitHandler<ISubmitForm>) => (e: React.FormEvent<HTMLFormElement>) => {
+	// 	submit(e);
+	// 	handleClick(e, email, pass);
+	//   };
+	const emailValidation = {
+		required: 'Поле обязательно к заполнению',
+		pattern: {
+			value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+			message: 'Неверный формат email'
+		}
+	}
+
+	const passValidation = {
+		required: 'Поле обязательно к заполнению',
+		pattern: {
+			value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
+			message:
+				'Пароль должен содержать минимум 8 символов, включая буквы и цифры'
+		}
+	}
+
+	const emailError = formState.errors?.email?.message
+	const passError = formState.errors?.pass?.message
+
+	//onSubmit={e => handleClick(e, email, pass)}
 
 	return (
-		<form className={style.form} onSubmit={e => handleClick(e, email, pass)}>
+		<form className={style.form} onSubmit={onSubmit}>
 			<Container>
 				<div className={style.form_wrapper}>
 					<h1 className={style.form_title}>{title}</h1>
@@ -93,21 +123,16 @@ const Form: React.FC<IFormProps> = ({
 									type={InputData[+id].type}
 									placeholderText={InputData[+id].placeholderText}
 									value={+id === 2 ? email : +id === 3 ? pass : ''}
-									// {...register('email', {
-									// 	required: 'Поле обязательно к заполнению',
-									// 	pattern: {
-									// 		value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-									// 		message: 'Неверный формат email'
-									// 	}
-									// })}
-									// {...register('pass', {
-									// 	required: 'Поле обязательно к заполнению',
-									// 	pattern: {
-									// 		value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
-									// 		message:
-									// 			'Пароль должен содержать минимум 8 символов, включая буквы и цифры'
-									// 	}
-									// })}
+									{...register(
+										+id === 2 ? 'email' : +id === 3 ? 'pass' : 'name',
+										{
+											required: true,
+											pattern:
+												+id === 2
+													? emailValidation.pattern
+													: passValidation.pattern
+										}
+									)}
 									onChange={e =>
 										+id === 2
 											? setEmail(e.target.value)
@@ -118,13 +143,13 @@ const Form: React.FC<IFormProps> = ({
 								/>
 							)
 						)}
-						{/* {emailError && (
-							<p className={style.form_inputs_error}>{emailError.message}</p>
+						{emailError && (
+							<p className={style.form_inputs_error}>{emailError}</p>
 						)}
 
 						{passError && (
-							<p className={style.form_inputs_error}>{passError.message}</p>
-						)} */}
+							<p className={style.form_inputs_error}>{passError}</p>
+						)}
 					</div>
 					<div className={style.form_agree}>
 						<input

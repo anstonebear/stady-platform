@@ -29,7 +29,7 @@ const Signin: React.FC = () => {
 						token: user.refreshToken
 					})
 				)
-				navigate('/')
+				navigate('/acc')
 			})
 			.catch(() => alert('Invalid user!'))
 	}
@@ -40,7 +40,7 @@ const Signin: React.FC = () => {
 				<Form
 					title='Вход'
 					descr='Добро пожаловать на SkillBridge!'
-					name={true}
+					name={false}
 					handleClick={(e, email, pass) => handelSignIn(e, email, pass)}
 				/>
 			</main>

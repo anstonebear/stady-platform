@@ -52,7 +52,7 @@ const Registr: React.FC = () => {
 				})
 			)
 
-			navigate('/')
+			navigate('/acc')
 		} catch (error) {
 			console.error(error)
 		}

@@ -10,6 +10,7 @@ import Pricing from '../pages/Pricing'
 import Contacts from '~/pages/Contacts'
 import Signin from '~/pages/Signin'
 import Registr from '~/pages/Registr'
+import Account from '~/pages/Account'
 
 import './App.css'
 
@@ -27,6 +28,7 @@ function App() {
 				<Route path='/contacts' element={<Contacts />} />
 				<Route path='/signin' element={<Signin />} />
 				<Route path='/registr' element={<Registr />} />
+				<Route path='/acc' element={<Account />} />
 			</Routes>
 
 			<Footer />
