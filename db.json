@@ -1,0 +1,73 @@
+[
+	{
+		"id": 1,
+		"title": "Фундаментальный веб-дизаин",
+		"description": "Благодаря этому курсу вы станете профи ",
+		"createdAt": "2025-01-13T11:22:22.061Z",
+		"updatedAt": "2025-01-13T11:22:22.061Z",
+		"images": [
+			"https://loremflickr.com/500/600?lock=5392133237616966",
+			"https://loremflickr.com/500/600?lock=3299054900403459",
+			"https://loremflickr.com/500/600?lock=4315484914169217"
+		],
+		"duration": 1,
+		"userId": null
+	},
+	{
+		"id": 2,
+		"title": "UI/UX Дизаин",
+		"description": "Благодаря этому курсу вы станете профи",
+		"createdAt": "2025-01-13T11:22:27.170Z",
+		"updatedAt": "2025-01-13T11:22:27.170Z",
+		"images": [
+			"https://loremflickr.com/500/600?lock=7729836385616504",
+			"https://loremflickr.com/500/600?lock=6365646819054421",
+			"https://loremflickr.com/500/600?lock=3161488695230625"
+		],
+		"duration": 1,
+		"userId": null
+	},
+	{
+		"id": 3,
+		"title": "Мобильная разработка",
+		"description": "Благодаря этому курсу вы станете профи",
+		"createdAt": "2025-01-13T11:22:32.107Z",
+		"updatedAt": "2025-01-13T11:22:32.107Z",
+		"images": [
+			"https://loremflickr.com/500/600?lock=5828322105614610",
+			"https://loremflickr.com/500/600?lock=769104297993509",
+			"https://loremflickr.com/500/600?lock=7458069736115958"
+		],
+		"duration": 1,
+		"userId": null
+	},
+	{
+		"id": 4,
+		"title": "Графический дизаин для новичков",
+		"description": "Благодаря этому курсу вы станете профи",
+		"createdAt": "2025-01-13T11:22:37.065Z",
+		"updatedAt": "2025-01-13T11:22:37.065Z",
+		"images": [
+			"https://loremflickr.com/500/600?lock=210098909859752",
+			"https://loremflickr.com/500/600?lock=8447202582762315",
+			"https://loremflickr.com/500/600?lock=902054589352015"
+		],
+		"duration": 1,
+		"userId": null
+	},
+	{
+		"id": 5,
+		"title": "Front-end разработка",
+		"description": "Благодаря этому курсу вы станете профи",
+		"createdAt": "2025-01-13T11:22:42.333Z",
+		"updatedAt": "2025-01-13T11:22:42.333Z",
+		"images": [
+			"https://loremflickr.com/500/600?lock=6893341856933626",
+			"https://loremflickr.com/500/600?lock=4302100824281481",
+			"https://loremflickr.com/500/600?lock=3367726905031691"
+		],
+		"duration": 1,
+		"userId": null
+	}
+]
+	
