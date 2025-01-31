@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 // import axios from 'axios'
 import { Container } from '~/shared/ui/container'
 import CoursesCard from './coursesCard'
-import { image1, image2, image3 } from '~/shared/public/index'
+// import { image1, image2, image3 } from '~/shared/public/index'
 import { dataCourses } from '~/api/request'
 
 import style from './coursesCards.module.scss'
@@ -11,6 +11,7 @@ interface ICoursesProps {
 	id: number
 	title: string
 	description: string
+	images: string[]
 }
 
 const CoursesCards: React.FC = () => {
@@ -39,7 +40,7 @@ const CoursesCards: React.FC = () => {
 	// 	  })
 	//   }, [])
 
-	// console.log(dataCourses(), 'RI_dataCourses')
+	console.log(dataCourses(), 'RI_dataCourses')
 	return (
 		<div className={style.coursesCards}>
 			<Container>
@@ -47,9 +48,7 @@ const CoursesCards: React.FC = () => {
 					{courses.map(course => (
 						<CoursesCard
 							key={course.id}
-							img1={image1}
-							img2={image2}
-							img3={image3}
+							img={course.images}
 							title={course.title}
 							descr={course.description}
 							experience={`начинающий`}

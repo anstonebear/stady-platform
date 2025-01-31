@@ -2,13 +2,13 @@
 	{
 		"id": 1,
 		"title": "Фундаментальный веб-дизаин",
-		"description": "Благодаря этому курсу вы станете профи ",
+		"description": "Изучите основы веб-дизайна, включая HTML, CSS и принципы адаптивного дизайна. Развивайте навыки создания визуально привлекательных и удобных для пользователя веб-сайтов ",
 		"createdAt": "2025-01-13T11:22:22.061Z",
 		"updatedAt": "2025-01-13T11:22:22.061Z",
 		"images": [
-			"https://loremflickr.com/500/600?lock=5392133237616966",
-			"https://loremflickr.com/500/600?lock=3299054900403459",
-			"https://loremflickr.com/500/600?lock=4315484914169217"
+			"https://disk.yandex.ru/i/RHyeyHn7swJkHA",
+			"https://disk.yandex.ru/i/roGspCWYB8NCow",
+			"https://disk.yandex.ru/i/H8x2S7zUsaX0Aw"
 		],
 		"duration": 1,
 		"userId": null
@@ -16,13 +16,13 @@
 	{
 		"id": 2,
 		"title": "UI/UX Дизаин",
-		"description": "Благодаря этому курсу вы станете профи",
+		"description": "Освойте искусство создания интуитивно понятных пользовательских интерфейсов (UI) и улучшения пользовательского опыта (UX). Изучите принципы дизайна, каркасное проектирование, прототипирование и методы тестирования удобства использования.",
 		"createdAt": "2025-01-13T11:22:27.170Z",
 		"updatedAt": "2025-01-13T11:22:27.170Z",
 		"images": [
-			"https://loremflickr.com/500/600?lock=7729836385616504",
-			"https://loremflickr.com/500/600?lock=6365646819054421",
-			"https://loremflickr.com/500/600?lock=3161488695230625"
+			"https://disk.yandex.ru/i/aTe0Qqp8QgPqzg",
+			"https://disk.yandex.ru/i/OGffN05HVHHczw",
+			"https://disk.yandex.ru/i/2LXtA7h_Kjizlw"
 		],
 		"duration": 1,
 		"userId": null
@@ -30,13 +30,13 @@
 	{
 		"id": 3,
 		"title": "Мобильная разработка",
-		"description": "Благодаря этому курсу вы станете профи",
+		"description": "Погрузитесь в мир разработки мобильных приложений. Научитесь создавать собственные приложения для iOS и Android, используя ведущие в отрасли фреймворки, такие как Swift и Kotlin.",
 		"createdAt": "2025-01-13T11:22:32.107Z",
 		"updatedAt": "2025-01-13T11:22:32.107Z",
 		"images": [
-			"https://loremflickr.com/500/600?lock=5828322105614610",
-			"https://loremflickr.com/500/600?lock=769104297993509",
-			"https://loremflickr.com/500/600?lock=7458069736115958"
+			"https://disk.yandex.ru/i/Ut9POyttqChZ3g",
+			"https://disk.yandex.ru/i/12qgrpnKCvQoTg",
+			"https://disk.yandex.ru/i/R8-naFou50QVYQ"
 		],
 		"duration": 1,
 		"userId": null
@@ -44,13 +44,13 @@
 	{
 		"id": 4,
 		"title": "Графический дизаин для новичков",
-		"description": "Благодаря этому курсу вы станете профи",
+		"description": "Откройте для себя основы графического дизайна, включая типографику, теорию цвета, дизайн макета и методы обработки изображений. Создавайте визуально ошеломляющие дизайны для печати и цифровых медиа",
 		"createdAt": "2025-01-13T11:22:37.065Z",
 		"updatedAt": "2025-01-13T11:22:37.065Z",
 		"images": [
-			"https://loremflickr.com/500/600?lock=210098909859752",
-			"https://loremflickr.com/500/600?lock=8447202582762315",
-			"https://loremflickr.com/500/600?lock=902054589352015"
+			"https://disk.yandex.ru/i/K86VFCAN-3OQ5w",
+			"https://disk.yandex.ru/i/XpLVkd0DqvUBJw",
+			"https://disk.yandex.ru/i/HrEhfeJoExQMig"
 		],
 		"duration": 1,
 		"userId": null
@@ -58,16 +58,15 @@
 	{
 		"id": 5,
 		"title": "Front-end разработка",
-		"description": "Благодаря этому курсу вы станете профи",
+		"description": "Станьте экспертом в разработке front-end веб-приложений. Изучите HTML, CSS, JavaScript и популярные фреймворки, такие как Bootstrap и React. Создавайте интерактивные и адаптивные веб-сайты.",
 		"createdAt": "2025-01-13T11:22:42.333Z",
 		"updatedAt": "2025-01-13T11:22:42.333Z",
 		"images": [
-			"https://loremflickr.com/500/600?lock=6893341856933626",
-			"https://loremflickr.com/500/600?lock=4302100824281481",
-			"https://loremflickr.com/500/600?lock=3367726905031691"
+			"https://disk.yandex.ru/i/poLvQ8btZsxOtQ",
+			"https://disk.yandex.ru/i/Iqtzso-21LI-ww",
+			"https://disk.yandex.ru/i/E7yNns_uL4GbcA"
 		],
 		"duration": 1,
 		"userId": null
 	}
 ]
-	

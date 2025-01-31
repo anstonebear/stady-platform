@@ -10,9 +10,8 @@ interface CoursesCardProps {
 	experience: string
 	level: string
 	teacher: string
-	img1: string
-	img2: string
-	img3: string
+	img: string[]
+
 	lesson1: string
 	lesson2: string
 	lesson3: string
@@ -21,9 +20,7 @@ interface CoursesCardProps {
 }
 
 const CoursesCard: React.FC<CoursesCardProps> = ({
-	img1,
-	img2,
-	img3,
+	img,
 	title,
 	descr,
 	experience,
@@ -50,9 +47,14 @@ const CoursesCard: React.FC<CoursesCardProps> = ({
 					</div>
 				</div>
 				<div className={style.coursesCard_image}>
-					<img src={img1} alt='' className={style.coursesCard_image_img} />
-					<img src={img2} alt='' className={style.coursesCard_image_img} />
-					<img src={img3} alt='' className={style.coursesCard_image_img} />
+					{img.map((image, index) => (
+						<img
+							src={image}
+							alt=''
+							key={index}
+							className={style.coursesCard_image_img}
+						/>
+					))}
 				</div>
 				<div className={style.coursesCard_beginning}>
 					<div className={style.coursesCard_experience}>
