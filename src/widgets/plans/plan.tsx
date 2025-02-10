@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Button from '~/shared/ui/button'
 import AvailableItem from './availableItem'
 
@@ -9,9 +7,10 @@ import style from './plans.module.scss'
 interface IPlanProps {
 	title: string
 	price: number
+	text: string
 }
 
-const Plan: React.FC<IPlanProps> = ({ title, price }) => {
+const Plan: React.FC<IPlanProps> = ({ title, price, text }) => {
 	return (
 		<div className={style.plan}>
 			<div className={style.plan_wrapper}>
@@ -28,11 +27,7 @@ const Plan: React.FC<IPlanProps> = ({ title, price }) => {
 						{Array(7)
 							.fill(null)
 							.map((id: number) => (
-								<AvailableItem
-									key={id}
-									img={yes}
-									text='Доступ к бесплатным курсам'
-								/>
+								<AvailableItem key={id} img={yes} text={text} />
 							))}
 					</div>
 				</div>

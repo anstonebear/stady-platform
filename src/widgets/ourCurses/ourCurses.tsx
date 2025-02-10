@@ -1,13 +1,37 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 
 import { Container } from '~/shared/ui/container'
 import OurCursesCard from './ourCursesCard'
 import Button from '~/shared/ui/button'
-import img from '../../shared/public/Image.png'
+import { tryThrow } from '~/shared/lib/utils'
+import { courseService } from '~/shared/services/courses'
 
 import style from './OurCurses.module.scss'
 
-const OurCurses = () => {
+interface ICoursesProps {
+	id: number
+	title: string
+	description: string
+	images: string
+}
+
+console.log(courseService.dataCourses(), 'courseService')
+
+const OurCurses: React.FC = () => {
+	const [courses, setCourses] = useState<ICoursesProps[]>([])
+
+	const getCourses = async () => {
+		const data = await tryThrow({ fn: () => courseService.dataCourses() })
+
+		setCourses(data)
+	}
+
+	console.log(courses, 'RI_coursesSS')
+
+	useEffect(() => {
+		getCourses()
+	}, [])
+
 	return (
 		<div className={style.ourCurses}>
 			<Container>
@@ -26,21 +50,17 @@ const OurCurses = () => {
 						</Button>
 					</div>
 					<div className={style.ourCurses_items}>
-						{Array(6)
-							.fill(null)
-							.map((_, id) => (
-								<OurCursesCard
-									key={id}
-									img={img}
-									title={`Фундаментальный веб-дизаин`}
-									descr={`Изучите основы веб-дизайна, включая HTML, CSS и принципы адаптивного
-					дизайна. Развивайте навыки создания визуально привлекательных и
-					удобных для пользователя веб-сайтов`}
-									experience={`начинающий`}
-									level={`4 недели`}
-									teacher={`by Jhon Smith`}
-								/>
-							))}
+						{courses.map(course => (
+							<OurCursesCard
+								key={course.id}
+								img={course.images}
+								title={course.title}
+								descr={course.description}
+								experience={`начинающий`}
+								level={`4 недели`}
+								teacher={`by Jhon Smith`}
+							/>
+						))}
 					</div>
 				</div>{' '}
 			</Container>

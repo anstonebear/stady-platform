@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react'
 import { Container } from '~/shared/ui/container'
 import CoursesCard from './coursesCard'
 // import { image1, image2, image3 } from '~/shared/public/index'
-import { dataCourses } from '~/api/request'
-
+import { courseService } from '~/shared/services/courses'
+import { tryThrow } from '~/shared/lib/utils'
 import style from './coursesCards.module.scss'
 
 interface ICoursesProps {
@@ -14,13 +14,32 @@ interface ICoursesProps {
 	images: string[]
 }
 
+// interface ILessonsProps {
+// 	id: number
+// 	title: string
+// 	description: string
+
+// }
+
 const CoursesCards: React.FC = () => {
 	const [courses, setCourses] = useState<ICoursesProps[]>([])
+	//const [lessons, setLessons] = useState<ILessonsProps[]>([])
+
+	const getCourses = async () => {
+		const data = await tryThrow({ fn: () => courseService.dataCourses() })
+
+		setCourses(data)
+	}
+
+	// const getLessons = async () => {
+	// 	const data = await tryThrow({ fn: () => courseService.dataLessons() })
+
+	// 	setLessons(data)
+	// }
 
 	useEffect(() => {
-		dataCourses().then(response => {
-			setCourses(response)
-		})
+		getCourses()
+		//getLessons()
 	}, [])
 
 	// useEffect(() => {
@@ -40,7 +59,7 @@ const CoursesCards: React.FC = () => {
 	// 	  })
 	//   }, [])
 
-	console.log(dataCourses(), 'RI_dataCourses')
+	console.log(courseService, 'RI_dataCourses')
 	return (
 		<div className={style.coursesCards}>
 			<Container>
