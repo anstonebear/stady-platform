@@ -14,16 +14,14 @@ interface ICoursesProps {
 	images: string[]
 }
 
-// interface ILessonsProps {
-// 	id: number
-// 	title: string
-// 	description: string
-
-// }
+interface ISubCoursesProps {
+	number: number
+	title: string
+	id: number
+}
 
 const CoursesCards: React.FC = () => {
 	const [courses, setCourses] = useState<ICoursesProps[]>([])
-	//const [lessons, setLessons] = useState<ILessonsProps[]>([])
 
 	const getCourses = async () => {
 		const data = await tryThrow({ fn: () => courseService.dataCourses() })
@@ -31,33 +29,18 @@ const CoursesCards: React.FC = () => {
 		setCourses(data)
 	}
 
-	// const getLessons = async () => {
-	// 	const data = await tryThrow({ fn: () => courseService.dataLessons() })
+	// const [subCourses, setSubCourses] = useState<ISubCoursesProps[]>([])
 
-	// 	setLessons(data)
+	// const getSubCourses = async () => {
+	// 	const data = await tryThrow({ fn: () => courseService.dataSubCourses() })
+
+	// 	setSubCourses(data)
 	// }
 
 	useEffect(() => {
 		getCourses()
-		//getLessons()
+		//getSubCourses()
 	}, [])
-
-	// useEffect(() => {
-	// 	fetch('https://platform-courses.emgushovs.ru/api/course')
-	// 		.then(res => {
-	// 			return res.json()
-	// 		})
-	// 		.then(arr => {
-	// 			setCourses(arr)
-	// 		})
-	// }, [])
-
-	// useEffect(() => {
-	// 	axios.get('https://platform-courses.emgushovs.ru/api/course')
-	// 	  .then(response => {
-	// 		setCourses(response.data);
-	// 	  })
-	//   }, [])
 
 	console.log(courseService, 'RI_dataCourses')
 	return (

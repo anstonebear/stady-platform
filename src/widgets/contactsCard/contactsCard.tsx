@@ -59,7 +59,7 @@ const ContactsCard: React.FC = () => {
 								className={style.contactsCard_left_personalInfo_input}
 								title='Email'
 								type='email'
-								placeholderText='Введите адрес электронной почты'
+								placeholderText='Введите ваш Gmail'
 							/>
 							<InputBlock
 								className={style.contactsCard_left_personalInfo_input}

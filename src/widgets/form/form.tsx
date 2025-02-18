@@ -24,7 +24,7 @@ const InputData: {
 	2: {
 		title: 'Email',
 		type: 'email',
-		placeholderText: 'Введите адрес электронной почты',
+		placeholderText: 'Введите ваш Gmail',
 		text: ''
 	},
 	3: {
