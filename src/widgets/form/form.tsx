@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth'
+import { useNavigate } from 'react-router'
 import { Container } from '~/shared/ui/container'
 import InputBlock from './inputBlock'
 import Button from '~/shared/ui/button'
@@ -61,6 +63,35 @@ const Form: React.FC<IFormProps> = ({
 }) => {
 	const [email, setEmail] = useState('')
 	const [pass, setPass] = useState('')
+	const provider = new GoogleAuthProvider()
+	const navigate = useNavigate()
+
+	const signInWithGoogle = async () => {
+		const auth = getAuth()
+		signInWithPopup(auth, provider)
+			.then(result => {
+				// Это даст вам токен доступа Google. Вы можете использовать его для доступа к Google API.
+				const credential = GoogleAuthProvider.credentialFromResult(result)
+				// const accessToken = credential.accessToken
+				// const refreshToken = credential.refreshToken
+				// // Информация о вошедшем в систему пользователе.
+				// localStorage.setItem('accessToken', accessToken)
+				// localStorage.setItem('refreshToken', refreshToken)
+				const user = result.user
+				console.log(user, 'RI_userDSVFVDFVDVDVDVDVDVDVD')
+				// Данные IdP доступны с помощью getAdditionalUserInfo(result)
+				// ...
+				navigate('/acc')
+			})
+			.catch(error => {
+				// Handle Errors here.
+				const errorCode = error.code
+				const errorMessage = error.message
+				// Адрес электронной почты используемой учетной записи пользователя.
+
+				// ...
+			})
+	}
 
 	const { register, handleSubmit, formState } = useForm<ISubmitForm>({
 		mode: 'onBlur'
@@ -166,7 +197,10 @@ const Form: React.FC<IFormProps> = ({
 					</div>
 					<div className={style.form_borderline}>или</div>
 					<div className={style.form_button}>
-						<Button className={style.form_button_btnGoogle} type='submit'>
+						<Button
+							className={style.form_button_btnGoogle}
+							onClick={signInWithGoogle}
+						>
 							<img
 								src='https://img.icons8.com/color/48/000000/google-logo.png'
 								alt=''

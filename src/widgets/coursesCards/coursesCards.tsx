@@ -18,10 +18,12 @@ interface ISubCoursesProps {
 	number: number
 	title: string
 	id: number
+	courseId: number
 }
 
 const CoursesCards: React.FC = () => {
 	const [courses, setCourses] = useState<ICoursesProps[]>([])
+	const [subCourses, setSubCourses] = useState<ISubCoursesProps[]>([])
 
 	const getCourses = async () => {
 		const data = await tryThrow({ fn: () => courseService.dataCourses() })
@@ -29,18 +31,21 @@ const CoursesCards: React.FC = () => {
 		setCourses(data)
 	}
 
-	// const [subCourses, setSubCourses] = useState<ISubCoursesProps[]>([])
+	const getSubCourses = async () => {
+		const data = await tryThrow({ fn: () => courseService.dataSubCourses() })
 
-	// const getSubCourses = async () => {
-	// 	const data = await tryThrow({ fn: () => courseService.dataSubCourses() })
-
-	// 	setSubCourses(data)
-	// }
+		setSubCourses(data)
+	}
 
 	useEffect(() => {
 		getCourses()
-		//getSubCourses()
 	}, [])
+
+	useEffect(() => {
+		if (courses.length > 0) {
+			getSubCourses()
+		}
+	}, [courses])
 
 	console.log(courseService, 'RI_dataCourses')
 	return (
@@ -56,11 +61,12 @@ const CoursesCards: React.FC = () => {
 							experience={`начинающий`}
 							level={`4 недели`}
 							teacher={`by Jhon Smith`}
-							lesson1={`Введение в HTML`}
-							lesson2={`CSS стилизация`}
-							lesson3={`Введение в адаптивный дизаин`}
-							lesson4={`Принципы веб-дизайна`}
-							lesson5={`Создание веб-сайта`}
+							subCourses={subCourses
+								.filter(subCourse => subCourse.courseId === course.id)
+								.map(subCourse => ({
+									title: subCourse.title,
+									number: subCourse.number
+								}))}
 						/>
 					))}
 				</div>

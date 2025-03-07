@@ -12,11 +12,7 @@ interface CoursesCardProps {
 	teacher: string
 	img: string[]
 
-	lesson1: string
-	lesson2: string
-	lesson3: string
-	lesson4: string
-	lesson5: string
+	subCourses: { title: string; number: number }[]
 }
 
 const CoursesCard: React.FC<CoursesCardProps> = ({
@@ -26,11 +22,7 @@ const CoursesCard: React.FC<CoursesCardProps> = ({
 	experience,
 	level,
 	teacher,
-	lesson1,
-	lesson2,
-	lesson3,
-	lesson4,
-	lesson5
+	subCourses
 }) => {
 	return (
 		<div className={style.coursesCard}>
@@ -69,36 +61,19 @@ const CoursesCard: React.FC<CoursesCardProps> = ({
 						Программа курса
 					</h2>
 					<ul className={style.coursesCard_curriculum_list}>
-						<li className={style.coursesCard_curriculum_list_column}>
-							<h1 className={style.coursesCard_curriculum_list_num}>01</h1>
-							<span className={style.coursesCard_curriculum_list_lesson}>
-								{lesson1}
-							</span>
-						</li>
-						<li className={style.coursesCard_curriculum_list_column}>
-							<h1 className={style.coursesCard_curriculum_list_num}>02</h1>
-							<span className={style.coursesCard_curriculum_list_lesson}>
-								{lesson2}
-							</span>
-						</li>
-						<li className={style.coursesCard_curriculum_list_column}>
-							<h1 className={style.coursesCard_curriculum_list_num}>03</h1>
-							<span className={style.coursesCard_curriculum_list_lesson}>
-								{lesson3}
-							</span>
-						</li>
-						<li className={style.coursesCard_curriculum_list_column}>
-							<h1 className={style.coursesCard_curriculum_list_num}>04</h1>
-							<span className={style.coursesCard_curriculum_list_lesson}>
-								{lesson4}
-							</span>
-						</li>
-						<li className={style.coursesCard_curriculum_list_column}>
-							<h1 className={style.coursesCard_curriculum_list_num}>05</h1>
-							<span className={style.coursesCard_curriculum_list_lesson}>
-								{lesson5}
-							</span>
-						</li>
+						{subCourses.map((subCourse, index) => (
+							<li
+								key={index}
+								className={style.coursesCard_curriculum_list_column}
+							>
+								<h1 className={style.coursesCard_curriculum_list_num}>
+									{subCourse.number}
+								</h1>
+								<span className={style.coursesCard_curriculum_list_lesson}>
+									{subCourse.title}
+								</span>
+							</li>
+						))}
 					</ul>
 				</div>
 			</div>

@@ -13,28 +13,55 @@ interface ISubCoursesProps {
 	id: number
 }
 
+interface ILessonsProps {
+	id: number
+	title: string
+	description: string
+	number: number
+	subCourseId: number
+	key: number
+}
+
 const Curriculum: React.FC = () => {
-	const [subCourses, setSubCourses] = useState<ISubCoursesProps[]>([])
+	const [subCourse, setSubCourse] = useState<ISubCoursesProps[]>([])
+	const [lessons, setLessons] = useState<ILessonsProps[]>([])
 
-	const getSubCourses = async () => {
+	const getSubCourse = async () => {
 		const data = await tryThrow({ fn: () => courseService.dataSubCourses() })
+		setSubCourse(data)
+	}
 
-		setSubCourses(data)
+	const getLessons = async () => {
+		const data = await tryThrow({
+			fn: () => courseService.dataLessons()
+		})
+		setLessons(data)
 	}
 
 	useEffect(() => {
-		getSubCourses()
+		getSubCourse()
 	}, [])
+
+	useEffect(() => {
+		if (subCourse.length > 0) {
+			subCourse.forEach(() => {
+				getLessons()
+			})
+		}
+	}, [subCourse])
 
 	return (
 		<div className={style.curriculum}>
 			<Container>
 				<div className={style.curriculum_wrapper}>
-					{subCourses.map(subCourses => (
+					{subCourse.map((subCourse, i) => (
 						<CurriculumCard
-							key={subCourses.id}
-							number='01'
-							title={subCourses.title}
+							key={subCourse.id}
+							number={'0' + ++i}
+							title={subCourse.title}
+							lessons={lessons.filter(
+								lesson => lesson.subCourseId === subCourse.id
+							)}
 						/>
 					))}
 				</div>
